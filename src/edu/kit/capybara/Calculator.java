@@ -13,8 +13,8 @@ import java.util.Scanner;
 public final class Calculator {
     private static final String EXIT_COMMAND_NAME = "quit";
 
-    private static final String ERROR_NO_OPERATORS = "Fehler: Du musst einen gültigen Rechenoperator benutzen";
-    private static final String ERROR_PARSE_INPUT = "Fehler: Eingabe enthält nicht das korrekte Format.%nDas korrekte "
+    private static final String ERROR_NO_OPERATORS = "Error, du musst einen gültigen Rechenoperator benutzen";
+    private static final String ERROR_PARSE_INPUT = "Error, die Eingabe enthält nicht das korrekte Format.%nDas korrekte "
             + "Format ist: a <operator> b, bzw: \" *\\d+ *[+-*/^] *\\d+ *\"%n";
 
     private static final char[] VALID_OPERATORS = { '+', '-', '*', '/', '^' };
