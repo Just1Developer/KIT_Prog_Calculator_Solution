@@ -62,32 +62,36 @@ public final class Calculator {
                 continue;
             }
 
-            switch (operator) {
-                case '+':
-                    System.out.println(leftOperand + rightOperand);
-                    break;
-                case '-':
-                    System.out.println(leftOperand - rightOperand);
-                    break;
-                case '*':
-                    System.out.println(leftOperand * rightOperand);
-                    break;
-                case '/':
-                    if (rightOperand == 0) {
-                        System.out.println(ERROR_DIVIDE_BY_ZERO);
-                    } else {
-                        System.out.println(leftOperand / rightOperand);
-                    }
-                    break;
-                case '^':
-                    System.out.println((int) Math.pow(leftOperand, rightOperand));
-                    break;
-                default:
-                    break;
-            }
+            performOperation(leftOperand, rightOperand, operator);
         }
 
         // should be closed, though it's not relevant for System.in
         scanner.close();
+    }
+
+    private static void performOperation(int leftOperand, int rightOperand, char operator) {
+        switch (operator) {
+            case '+':
+                System.out.println(leftOperand + rightOperand);
+                break;
+            case '-':
+                System.out.println(leftOperand - rightOperand);
+                break;
+            case '*':
+                System.out.println(leftOperand * rightOperand);
+                break;
+            case '/':
+                if (rightOperand == 0) {
+                    System.out.println(ERROR_DIVIDE_BY_ZERO);
+                } else {
+                    System.out.println(leftOperand / rightOperand);
+                }
+                break;
+            case '^':
+                System.out.println((int) Math.pow(leftOperand, rightOperand));
+                break;
+            default:
+                break;
+        }
     }
 }
