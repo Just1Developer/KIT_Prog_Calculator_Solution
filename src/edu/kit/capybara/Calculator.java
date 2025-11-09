@@ -75,7 +75,7 @@ public final class Calculator {
                     System.out.println(leftOperand / rightOperand);
                     break;
                 case '^':
-                    System.out.println(Math.pow(leftOperand, rightOperand));
+                    System.out.println((int) Math.pow(leftOperand, rightOperand));
                     break;
                 default:
                     break;
