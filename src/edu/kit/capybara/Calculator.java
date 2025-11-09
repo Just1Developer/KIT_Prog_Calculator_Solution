@@ -16,6 +16,7 @@ public final class Calculator {
     private static final String ERROR_NO_OPERATORS = "Error, du musst einen gültigen Rechenoperator benutzen";
     private static final String ERROR_PARSE_INPUT = "Error, die Eingabe enthält nicht das korrekte Format. Das korrekte "
             + "Format ist: a <operator> b, bzw: \" *\\d+ *[+-*/^] *\\d+ *\"%n";
+    private static final String ERROR_DIVIDE_BY_ZERO = "Error, du darfst nicht durch 0 teilen";
 
     private static final char[] VALID_OPERATORS = { '+', '-', '*', '/', '^' };
 
@@ -72,7 +73,11 @@ public final class Calculator {
                     System.out.println(leftOperand * rightOperand);
                     break;
                 case '/':
-                    System.out.println(leftOperand / rightOperand);
+                    if (rightOperand == 0) {
+                        System.out.println(ERROR_DIVIDE_BY_ZERO);
+                    } else {
+                        System.out.println(leftOperand / rightOperand);
+                    }
                     break;
                 case '^':
                     System.out.println((int) Math.pow(leftOperand, rightOperand));
